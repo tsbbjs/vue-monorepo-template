@@ -1,7 +1,7 @@
 vue-simple-package
 ===
 
-展示 [`vue 3`](https://v3.vuejs.org/) 简单的包开发工程实例。
+简单的 [`vue 3`](https://v3.vuejs.org/) 包开发工程实例模板。
 
 ### 目录结构
 
