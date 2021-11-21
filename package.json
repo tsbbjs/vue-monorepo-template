@@ -9,8 +9,9 @@
     "watch:simple": "lerna exec \"tsbb watch --use-vue\" --scope @vue-simple-package/simple",
     "watch:base": "lerna exec \"tsbb watch --use-vue\" --scope @vue-simple-package/base",
     "prettier": "prettier --write \"**/*.{js,jsx,vue,tsx,ts,less,md,json}\"",
+    "clean": "lerna clean --yes",
     "hoist": "lerna bootstrap --hoist",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap --force-local --no-ci"
   },
   "author": "jaywcjlove",
   "license": "MIT",
