@@ -1,7 +1,7 @@
 vue-simple-package
 ===
 
-展示 vue 简单的包开发工程实例。
+展示 [`vue 3`](https://v3.vuejs.org/) 简单的包开发工程实例。
 
 ### 目录结构
 
@@ -42,13 +42,7 @@ npm install
 npm run bootstrap
 ```
 
-3. 安装包和实例中的依赖
-
-```shell
-npm run bootstrap
-```
-
-4. 编译包中代码
+3. 编译包中代码
 
 ```shell
 npm run build        # 编译所有包 📦 代码
@@ -57,7 +51,7 @@ npm run watch:simple # 实时编译 📦 @vue-simple-package/simple
 npm run watch:base   # 实时编译 📦 @vue-simple-package/base
 ```
 
-5. 启动 `website` 实例网站
+4. 启动 `website` 实例网站
 
 ```shell
 npm run start
