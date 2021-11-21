@@ -14,8 +14,6 @@ import { defineComponent } from 'vue';
 import Simple from '@vue-simple-package/simple';
 import VBase from '@vue-simple-package/base';
 
-// console.log('Simple:', Simple)
-
 export default defineComponent({
   components: {
     Simple,
