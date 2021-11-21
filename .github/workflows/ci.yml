@@ -13,7 +13,9 @@ jobs:
         with:
           node-version: 14
 
-      - run: npm install
+      - run: npm i npm@7 -g
+      - run: npm ci
+      # - run: npm install
       - run: npm run hoist
       # - run: npm run bootstrap
       - run: npm run build
