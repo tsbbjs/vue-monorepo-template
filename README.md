@@ -2,6 +2,7 @@ vue-simple-package
 ===
 
 [![Downloads](https://img.shields.io/static/v1?label=Github&message=repo&color=green&style=flat&logo=github)](https://github.com/tsbbjs/vue-simple-package)
+[![Build & Deploy](https://github.com/tsbbjs/vue-simple-package/actions/workflows/ci.yml/badge.svg)](https://github.com/tsbbjs/vue-simple-package/actions/workflows/ci.yml)
 
 简单的 [`vue 3`](https://v3.vuejs.org/) 包开发工程实例模板。
 
