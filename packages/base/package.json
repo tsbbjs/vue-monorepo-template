@@ -5,6 +5,14 @@
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "license": "MIT",
+  "files": [
+    "cjs",
+    "esm"
+  ],
+  "keywords": [
+    "vue",
+    "vue3"
+  ],
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
