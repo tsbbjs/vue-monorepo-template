@@ -11,4 +11,7 @@ module.exports = {
       },
     },
   },
+  chainWebpack: (conf) => {
+    conf.module.rule('text').test(/\.md$/i).use('raw-loader').loader('raw-loader').end();
+  },
 };

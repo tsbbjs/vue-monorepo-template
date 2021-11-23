@@ -1,15 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div>
+    <div class="home">
+      <img alt="Vue logo" src="../assets/logo.png" />
+    </div>
+    <markdown-preview :source="markdown" class="markdown"></markdown-preview>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import MarkdownPreview from '@uivjs/vue-markdown-preview';
+import '@uivjs/vue-markdown-preview/markdown.css';
+// import str from '@uivjs/vue-markdown-preview/README.md';
+import str from '../../../README.md';
 
 export default {
   name: 'Home',
-  components: {},
+  data() {
+    return {
+      markdown: str,
+    };
+  },
+  components: {
+    MarkdownPreview,
+  },
 };
 </script>
+
+<style scoped>
+.markdown {
+  text-align: left;
+  max-width: 860px;
+  padding-bottom: 120px;
+}
+</style>

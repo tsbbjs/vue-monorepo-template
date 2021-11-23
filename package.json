@@ -1,5 +1,4 @@
 {
-  "name": "vue-simple-package",
   "private": true,
   "scripts": {
     "prepare": "husky install",
@@ -9,6 +8,7 @@
     "watch:simple": "lerna exec \"tsbb watch --use-vue\" --scope @vue-simple-package/simple",
     "watch:base": "lerna exec \"tsbb watch --use-vue\" --scope @vue-simple-package/base",
     "prettier": "prettier --write \"**/*.{js,jsx,vue,tsx,ts,less,md,json}\"",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "clean": "lerna clean --yes",
     "hoist": "lerna bootstrap --hoist",
     "bootstrap": "lerna bootstrap --force-local --no-ci"
