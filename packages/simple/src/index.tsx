@@ -9,13 +9,9 @@ export default defineComponent({
     },
   },
   setup(props) {
-    console.log(props);
-    return {
-      ...props,
+    const { title } = props;
+    return () => {
+      return <div>Package Base, {title}</div>;
     };
-  },
-  render() {
-    const { title } = this;
-    return <div>Package Simple, {title}</div>;
   },
 });
