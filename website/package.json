@@ -12,7 +12,7 @@
     "@vue-simple-package/simple": "1.0.0",
     "@vue-simple-package/base": "1.0.0",
     "@uivjs/vue-github-corners": "0.0.2",
-    "@uivjs/vue-markdown-preview": "0.0.5",
+    "@uivjs/vue-markdown-preview": "0.0.7",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
