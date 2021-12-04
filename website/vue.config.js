@@ -38,20 +38,20 @@ module.exports = {
   },
   chainWebpack: (conf) => {
     conf.module.rule('text').test(/\.md$/i).use('raw-loader').loader('raw-loader').end();
-    conf.when(process.env.NODE_ENV !== 'development', (config) => {
-      config.optimization.splitChunks({
-        chunks: 'all',
-        cacheGroups: {
-          hastutilselect: {
-            name: 'vendors-hast-util',
-            chunks: 'initial',
-            test: /[\\/]node_modules[\\/]hast-util-(.*)[\\/]/,
-            priority: -3,
-          },
-        },
-      });
-      // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
-      config.optimization.runtimeChunk('single');
-    });
+    // conf.when(process.env.NODE_ENV !== 'development', (config) => {
+    //   config.optimization.splitChunks({
+    //     chunks: 'all',
+    //     cacheGroups: {
+    //       hastutilselect: {
+    //         name: 'vendors-hast-util',
+    //         chunks: 'initial',
+    //         test: /[\\/]node_modules[\\/]hast-util-(.*)[\\/]/,
+    //         priority: -3,
+    //       },
+    //     },
+    //   });
+    //   // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
+    //   config.optimization.runtimeChunk('single');
+    // });
   },
 };
