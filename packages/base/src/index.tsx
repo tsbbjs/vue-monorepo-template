@@ -11,7 +11,7 @@ export default defineComponent({
   setup(props) {
     const { title } = props;
     return () => {
-      return <div>Package Base, {title}</div>;
+      return <div>Package: {title}</div>;
     };
   },
 });

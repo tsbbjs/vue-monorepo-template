@@ -1,7 +1,8 @@
 <template>
   <div>
-    <simple title="001"></simple>
-    <v-base title="002"></v-base>
+    <github-corners fixed href="https://github.com/tsbbjs/vue-simple-package" />
+    <simple title="@vue-simple-package/simple"></simple>
+    <v-base title="@vue-simple-package/base"></v-base>
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -11,11 +12,13 @@
 </template>
 <script>
 import { defineComponent } from 'vue';
+import GithubCorners from '@uivjs/vue-github-corners';
 import Simple from '@vue-simple-package/simple';
 import VBase from '@vue-simple-package/base';
 
 export default defineComponent({
   components: {
+    GithubCorners,
     Simple,
     VBase,
   },
@@ -37,6 +40,10 @@ export default defineComponent({
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  margin: 0 5px;
+  background: #ededed;
+  padding: 2px 8px;
+  border-radius: 3px;
 }
 
 #nav a.router-link-exact-active {

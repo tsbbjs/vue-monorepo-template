@@ -1,6 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
+  "description": "简单的 vue 3 包开发工程实例模板 vue-simple-package。",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +11,8 @@
   "dependencies": {
     "@vue-simple-package/simple": "1.0.0",
     "@vue-simple-package/base": "1.0.0",
-    "@uivjs/vue-markdown-preview": "0.0.7",
+    "@uivjs/vue-github-corners": "0.0.2",
+    "@uivjs/vue-markdown-preview": "0.0.5",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
@@ -26,6 +28,19 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0"
   },
+  "keywords": [
+    "vue",
+    "vue3",
+    "simple",
+    "component",
+    "components",
+    "vue-simple-package",
+    "ui",
+    "css",
+    "uikit",
+    "vue-ui",
+    "framework"
+  ],
   "eslintConfig": {
     "root": true,
     "env": {
