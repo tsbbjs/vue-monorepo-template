@@ -39,6 +39,7 @@ module.exports = {
   chainWebpack: (conf) => {
     conf.module.rule('text').test(/\.md$/i).use('raw-loader').loader('raw-loader').end();
     conf.optimization.splitChunks({
+      chunks: 'all', // async对异步引入的代码分割 initial 对同步引入代码分割 all对同步异步引入的分割都开启
       minSize: 30000, // 字节 引入的文件大于30kb才进行分割
       maxSize: 0, // 文件的最大尺寸，优先级：maxInitialRequest/maxAsyncRequests < maxSize < minSize
       minChunks: 1, // 模块至少使用次数
