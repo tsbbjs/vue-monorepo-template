@@ -1,1 +1,1 @@
-Documentation site for [vue-simple-package](https://tsbbjs.github.io/vue-simple-package).
+Documentation site for [vue-monorepo-template](https://tsbbjs.github.io/vue-monorepo-template).

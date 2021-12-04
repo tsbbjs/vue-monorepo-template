@@ -1,8 +1,8 @@
 <template>
   <div>
-    <github-corners fixed href="https://github.com/tsbbjs/vue-simple-package" />
-    <simple title="@vue-simple-package/simple"></simple>
-    <v-base title="@vue-simple-package/base"></v-base>
+    <github-corners fixed href="https://github.com/tsbbjs/vue-monorepo-template" />
+    <simple title="@vue-monorepo-template/simple"></simple>
+    <v-base title="@vue-monorepo-template/base"></v-base>
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -13,8 +13,8 @@
 <script>
 import { defineComponent } from 'vue';
 import GithubCorners from '@uivjs/vue-github-corners';
-import Simple from '@vue-simple-package/simple';
-import VBase from '@vue-simple-package/base';
+import Simple from '@vue-monorepo-template/simple';
+import VBase from '@vue-monorepo-template/base';
 
 export default defineComponent({
   components: {

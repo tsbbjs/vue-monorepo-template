@@ -1,8 +1,8 @@
-@vue-simple-package/base
+@vue-monorepo-template/base
 ===
 
 ```bash
-npm i @vue-simple-package/base
+npm i @vue-monorepo-template/base
 ```
 
 ```vue
@@ -14,7 +14,7 @@ npm i @vue-simple-package/base
 
 <script>
 import { defineComponent } from 'vue'
-import VBase from '@vue-simple-package/base';
+import VBase from '@vue-monorepo-template/base';
 
 export default defineComponent({
   components: {

@@ -1,8 +1,8 @@
-vue-simple-package
+vue-monorepo-template
 ===
 
-[![Downloads](https://img.shields.io/static/v1?label=Github&message=repo&color=green&style=flat&logo=github)](https://github.com/tsbbjs/vue-simple-package)
-[![Build & Deploy](https://github.com/tsbbjs/vue-simple-package/actions/workflows/ci.yml/badge.svg)](https://github.com/tsbbjs/vue-simple-package/actions/workflows/ci.yml)
+[![Downloads](https://img.shields.io/static/v1?label=Github&message=repo&color=green&style=flat&logo=github)](https://github.com/tsbbjs/vue-monorepo-template)
+[![Build & Deploy](https://github.com/tsbbjs/vue-monorepo-template/actions/workflows/ci.yml/badge.svg)](https://github.com/tsbbjs/vue-monorepo-template/actions/workflows/ci.yml)
 
 简单的 [`vue 3`](https://v3.vuejs.org/) 包开发工程实例模板。
 
@@ -14,13 +14,13 @@ vue-simple-package
 ├── lerna.json
 ├── package.json
 ├── packages             # 放置包的目录
-│   ├── base                # 📦 包 @vue-simple-package/base
+│   ├── base                # 📦 包 @vue-monorepo-template/base
 │   │   ├── cjs             # 🔄 编译后的 cjs 目录
 │   │   ├── esm             # 🔄 编译后的 esm 目录
 │   │   ├── package.json
 │   │   ├── src             # 包源码目录
 │   │   └── tsconfig.json
-│   └── simple              # 📦 包 @vue-simple-package/simple
+│   └── simple              # 📦 包 @vue-monorepo-template/simple
 ├── tsconfig.json
 └── website              # 🐝 包实例测试，网站
     ├── README.md
@@ -50,8 +50,8 @@ npm run bootstrap
 ```shell
 npm run build        # 编译所有包 📦 代码
 
-npm run watch:simple # 实时编译 📦 @vue-simple-package/simple
-npm run watch:base   # 实时编译 📦 @vue-simple-package/base
+npm run watch:simple # 实时编译 📦 @vue-monorepo-template/simple
+npm run watch:base   # 实时编译 📦 @vue-monorepo-template/base
 ```
 
 4. 启动 `website` 实例网站

@@ -1,5 +1,5 @@
 {
-  "name": "@vue-simple-package/base",
+  "name": "@vue-monorepo-template/base",
   "version": "1.0.0",
   "description": "base package.",
   "main": "./cjs/index.js",

@@ -2,7 +2,7 @@ const path = require(`path`);
 const pkg = require('./package.json');
 
 module.exports = {
-  publicPath: '/vue-simple-package/',
+  publicPath: '/vue-monorepo-template/',
   pages: {
     index: {
       // page 的入口
@@ -13,7 +13,7 @@ module.exports = {
       filename: 'index.html',
       // 当使用 title 选项时，
       // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'vue-simple-package, 简单的 vue 3 包开发工程实例模板。',
+      title: 'vue-monorepo-template, 简单的 vue 3 包开发工程实例模板。',
       description: pkg.description,
       keywordss: pkg.keywords.join(','),
       // 在这个页面中包含的块，默认情况下会包含
