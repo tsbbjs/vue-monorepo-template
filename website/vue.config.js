@@ -38,71 +38,20 @@ module.exports = {
   },
   chainWebpack: (conf) => {
     conf.module.rule('text').test(/\.md$/i).use('raw-loader').loader('raw-loader').end();
-    conf.optimization.splitChunks({
-      // chunks: 'async', // `async` 对异步引入的代码分割 `initial` 对同步引入代码分割 `all` 对同步异步引入的分割都开启
-      minSize: 30000, // 字节 引入的文件大于30kb才进行分割
-      maxSize: 0, // 文件的最大尺寸，优先级：`maxInitialRequest/maxAsyncRequests` < `maxSize` < `minSize`
-      minChunks: 1, // 模块至少使用次数
-      maxAsyncRequests: 30, // 同时加载的模块数量最多是_个，只分割出同时引入的前_个文件（按需加载模块）
-      maxInitialRequests: 25, // 首页加载的时候引入的文件最多 _ 个（加载初始页面）
-      automaticNameDelimiter: '~', // 缓存组和生成文件名称之间的连接符
-      name: true, // 缓存组里面的 filename 生效，覆盖默认命名
-      cacheGroups: {
-        decodenamedcharacterreference: {
-          name: 'vendors-decode-named-character-reference',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](decode-named-character-reference)[\\/]/,
-          priority: -3,
+    conf.when(process.env.NODE_ENV !== 'development', (config) => {
+      config.optimization.splitChunks({
+        chunks: 'all',
+        cacheGroups: {
+          hastutilselect: {
+            name: 'vendors-hast-util',
+            chunks: 'initial',
+            test: /[\\/]node_modules[\\/]hast-util-(.*)[\\/]/,
+            priority: -3,
+          },
         },
-        micromarkcorecommonmark: {
-          name: 'vendors-micromark-core-commonmark',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](micromark-core-commonmark)[\\/]/,
-          priority: -3,
-        },
-        hastutilselect: {
-          name: 'vendors-hast-util',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](hast-util-select|hast-util-to-html|hast-util-from-parse5|hast-util-hyperscript)[\\/]/,
-          priority: -3,
-        },
-        refractor: {
-          name: 'vendors-refractor',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](refractor)[\\/]/,
-          priority: -2,
-        },
-        parse5: {
-          name: 'vendors-parse5',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](parse5)[\\/]/,
-          priority: -2,
-        },
-        corejs: {
-          name: 'vendors-core-js',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](core-js)[\\/]/,
-          priority: -2,
-        },
-        rehypeprism: {
-          name: 'vendors-rehype-prism',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](\@mapbox[\\/]rehype-prism)[\\/]/,
-          priority: -2,
-        },
-        vue: {
-          name: 'vendors-vue',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](vue|@vue)[\\/]/,
-          priority: -2,
-        },
-        vuerouter: {
-          name: 'vendors-vue-router',
-          // chunks: 'all',
-          test: /[\\/]node_modules[\\/](vue-router)[\\/]/,
-          priority: -2,
-        },
-      },
+      });
+      // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
+      config.optimization.runtimeChunk('single');
     });
   },
 };
