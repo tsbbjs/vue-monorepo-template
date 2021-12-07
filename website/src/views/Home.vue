@@ -3,7 +3,9 @@
     <div class="home">
       <img alt="Vue logo" src="../assets/logo.png" />
     </div>
-    <markdown-preview :source="markdown" class="markdown"></markdown-preview>
+    <markdown-preview class="markdown">
+      {{ markdown }}
+    </markdown-preview>
   </div>
 </template>
 
