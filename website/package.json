@@ -12,7 +12,7 @@
   "dependencies": {
     "@vue-monorepo-template/simple": "1.0.0",
     "@vue-monorepo-template/base": "1.0.0",
-    "@uivjs/vue-github-corners": "1.0.0",
+    "@uivjs/vue-github-corners": "1.0.1",
     "@uivjs/vue-markdown-preview": "1.0.3",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
