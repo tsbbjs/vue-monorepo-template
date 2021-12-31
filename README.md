@@ -13,16 +13,16 @@ Simple [`vue 3`](https://v3.vuejs.org/) package development project example temp
 ├── README.md
 ├── lerna.json
 ├── package.json
-├── packages             # 放置包的目录
-│   ├── base                # 📦 包 @vue-monorepo-template/base
-│   │   ├── cjs             # 🔄 编译后的 cjs 目录
-│   │   ├── esm             # 🔄 编译后的 esm 目录
+├── packages             # The directory where the package is placed
+│   ├── base                # 📦 package @vue-monorepo-template/base
+│   │   ├── cjs             # 🔄 Compiled cjs directory
+│   │   ├── esm             # 🔄 Compiled esm directory
 │   │   ├── package.json
-│   │   ├── src             # 包源码目录
+│   │   ├── src             # Package source directory
 │   │   └── tsconfig.json
-│   └── simple              # 📦 包 @vue-monorepo-template/simple
+│   └── simple              # 📦 package @vue-monorepo-template/simple
 ├── tsconfig.json
-└── website              # 🐝 包实例测试，网站
+└── website              # 🐝 Package example test, website
     ├── README.md
     ├── babel.config.js
     ├── package.json
