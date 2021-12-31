@@ -4,9 +4,9 @@ vue-monorepo-template
 [![Downloads](https://img.shields.io/static/v1?label=Github&message=repo&color=green&style=flat&logo=github)](https://github.com/tsbbjs/vue-monorepo-template)
 [![Build & Deploy](https://github.com/tsbbjs/vue-monorepo-template/actions/workflows/ci.yml/badge.svg)](https://github.com/tsbbjs/vue-monorepo-template/actions/workflows/ci.yml)
 
-简单的 [`vue 3`](https://v3.vuejs.org/) 包开发工程实例模板。
+Simple [`vue 3`](https://v3.vuejs.org/) package development project example template.
 
-### 目录结构
+### Directory Structure
 
 ```shell
 .
@@ -31,30 +31,30 @@ vue-monorepo-template
     └── vue.config.js
 ```
 
-### 开发
+### Development
 
-1. 安装
+1. Install
 
 ```shell
 npm install
 ```
 
-2. 安装包和实例中的依赖
+2. Dependencies in the installation package and example
 
 ```shell
 npm run bootstrap
 ```
 
-3. 编译包中代码
+3. Compile the code in the package
 
 ```shell
-npm run build        # 编译所有包 📦 代码
+npm run build        # Compile all packages 📦 code
 
-npm run watch:simple # 实时编译 📦 @vue-monorepo-template/simple
-npm run watch:base   # 实时编译 📦 @vue-monorepo-template/base
+npm run watch:simple # Real-time compilation 📦 @vue-monorepo-template/simple
+npm run watch:base   # Real-time compilation 📦 @vue-monorepo-template/base
 ```
 
-4. 启动 `website` 实例网站
+4. Start the `website` example website
 
 ```shell
 npm run start
