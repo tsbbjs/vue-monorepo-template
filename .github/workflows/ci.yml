@@ -6,14 +6,14 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
 
-      - run: npm i npm@7 -g
       # - run: npm ci
       - run: npm install
       # - run: npm run hoist
@@ -23,14 +23,14 @@ jobs:
 
       - name: Create Tag
         id: create_tag
-        uses: jaywcjlove/create-tag-action@v1.3.4
+        uses: jaywcjlove/create-tag-action@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           package-path: ./packages/base/package.json
 
       - name: Generate Changelog
         id: changelog
-        uses: jaywcjlove/changelog-generator@v1.4.8
+        uses: jaywcjlove/changelog-generator@main
         if: steps.create_tag.outputs.successful
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -39,7 +39,7 @@ jobs:
           filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
       - name: Create Release
-        uses: jaywcjlove/create-tag-action@v1.3.4
+        uses: jaywcjlove/create-tag-action@main
         with:
           package-path: ./packages/base/package.json
           release: true
@@ -63,3 +63,17 @@ jobs:
       #   with:
       #     token: ${{ secrets.NPM_TOKEN }}
       #     package: ./packages/simple/package.json
+
+      # - run: npm publish
+      #   name: packages/simple
+      #   working-directory: packages/simple
+      #   continue-on-error: true
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # - run: npm publish
+      #   name: packages/base
+      #   working-directory: packages/base
+      #   continue-on-error: true
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
