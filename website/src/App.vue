@@ -23,7 +23,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <github-corners fixed target="__blank" href="https://github.com/uivjs/vue-markdown-preview" />
+    <github-corners fixed target="__blank" href="https://github.com/tsbbjs/vue-monorepo-template" />
     <header>
       <div>
         <img src="./assets/vue.svg" alt="Vue Monorepo Template" />
