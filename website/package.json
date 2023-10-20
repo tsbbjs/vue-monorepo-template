@@ -16,7 +16,7 @@
     "@vue-monorepo-template/simple": "1.0.0",
     "@vue-monorepo-template/base": "1.0.0",
     "@uivjs/vue-github-corners": "1.0.1",
-    "@uivjs/vue-markdown-preview": "1.0.3",
+    "@uivjs/vue-markdown-preview": "1.0.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
