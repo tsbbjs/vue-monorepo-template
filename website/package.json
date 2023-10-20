@@ -11,7 +11,7 @@
   "dependencies": {
     "@vue-monorepo-template/simple": "1.0.0",
     "@vue-monorepo-template/base": "1.0.0",
-    "@uivjs/vue-github-corners": "^0.0.2",
+    "@uivjs/vue-github-corners": "^1.0.0",
     "@uivjs/vue-markdown-preview": "^1.0.4",
     "vue": "^3.3.4"
   },
