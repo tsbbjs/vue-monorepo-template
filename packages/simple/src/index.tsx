@@ -5,13 +5,12 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      defalut: 'title',
+      default: 'title',
     },
   },
   setup(props) {
-    const { title } = props;
     return () => {
-      return <div>Package: {title}</div>;
+      return <div>Package Simple: {props.title}</div>;
     };
   },
 });

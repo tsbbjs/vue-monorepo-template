@@ -1,17 +1,18 @@
 import { defineComponent, h } from 'vue';
 
+const defaultProps = {
+  title: {
+    type: String,
+    default: 'title',
+  },
+};
+
 export default defineComponent({
   name: 'Base',
-  props: {
-    title: {
-      type: String,
-      defalut: 'title',
-    },
-  },
+  props: defaultProps,
   setup(props) {
-    const { title } = props;
     return () => {
-      return <div>Package: {title}</div>;
+      return <div>Package Base: {props.title}</div>;
     };
   },
 });

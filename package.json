@@ -3,10 +3,10 @@
   "scripts": {
     "prepare": "husky install",
     "start": "lerna exec \"npm run dev\" --scope website",
-    "build:website": "lerna exec \"npm run build\" --scope website",
-    "build": "lerna exec \"tsbb build src/*.tsx --use-babel --use-vue\" --scope @vue-monorepo-template/*",
-    "watch:simple": "lerna exec \"tsbb watch src/*.tsx --use-babel --use-vue\" --scope @vue-monorepo-template/simple",
-    "watch:base": "lerna exec \"tsbb watch src/*.tsx --use-babel --use-vue\" --scope @vue-monorepo-template/base",
+    "doc": "lerna exec \"npm run build\" --scope website",
+    "build": "lerna exec \"tsbb build \"src/*.{tsx,ts}\" --use-babel --use-vue\" --scope @vue-monorepo-template/*",
+    "watch:simple": "lerna exec \"tsbb watch \"src/*.{tsx,ts}\" --use-babel --use-vue\" --scope @vue-monorepo-template/simple",
+    "watch:base": "lerna exec \"tsbb watch \"src/*.{tsx,ts}\" --use-babel --use-vue\" --scope @vue-monorepo-template/base",
     "prettier": "prettier --write \"**/*.{js,jsx,vue,tsx,ts,less,md,json}\"",
     "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "clean": "lerna clean --yes"

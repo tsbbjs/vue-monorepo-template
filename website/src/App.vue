@@ -1,89 +1,81 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import GithubCorners from '@uivjs/vue-github-corners'
-import Simple from '@vue-monorepo-template/simple'
-import VBase from '@vue-monorepo-template/base'
+<script>
+import { defineComponent } from 'vue';
+import pkg from '@uivjs/vue-markdown-preview/package.json';
+import GithubCorners from '@uivjs/vue-github-corners';
+import MarkdownPreview from '@uivjs/vue-markdown-preview';
+import ExampleBase from './Example.vue';
+import mdStr from '../../README.md';
+
+export default defineComponent({
+  data() {
+    return {
+      markdown: mdStr,
+      description: pkg.description,
+    };
+  },
+  components: {
+    'example-base': ExampleBase,
+    GithubCorners,
+    MarkdownPreview,
+  },
+});
 </script>
 
 <template>
   <div>
-    <github-corners fixed href="https://github.com/tsbbjs/vue-monorepo-template" />
-    <simple title="@vue-monorepo-template/simple"></simple>
-    <v-base title="@vue-monorepo-template/base"></v-base>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <github-corners fixed target="__blank" href="https://github.com/uivjs/vue-markdown-preview" />
+    <header>
+      <div>
+        <img src="./assets/vue.svg" alt="Vue Monorepo Template" />
+      </div>
+      <a href="https://github.com/uivjs/vue-markdown-preview" target="__blank">Vue Monorepo Template</a>
+      <p>Simple Vue 3 package development project example template.</p>
+    </header>
+    <example-base></example-base>
+    <markdown-preview class="markdown">
+      {{ markdown }}
+    </markdown-preview>
   </div>
-  <RouterView />
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+header img {
+  height: 20vmin;
+}
+header a {
+  color: #09d3ac;
+  font-weight: bold;
+}
+header p {
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 560px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.markdown {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 23px;
+  border-radius: 5px;
+  margin-bottom: 110px;
 }
 </style>
