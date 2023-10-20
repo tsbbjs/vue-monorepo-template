@@ -7,11 +7,14 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           registry-url: 'https://registry.npmjs.org'
 
       # - run: npm ci
@@ -54,26 +57,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/dist
 
-      # - uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.NPM_TOKEN }}
-      #     package: ./packages/base/package.json
-
-      # - uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.NPM_TOKEN }}
-      #     package: ./packages/simple/package.json
-
-      # - run: npm publish
-      #   name: packages/simple
-      #   working-directory: packages/simple
+      # - run: npm publish --access public --provenance
+      #   name: 📦 @vue-monorepo-template/base publish to NPM
       #   continue-on-error: true
+      #   working-directory: packages/base
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # - run: npm publish
-      #   name: packages/base
-      #   working-directory: packages/base
+      # - run: npm publish --access public --provenance
+      #   name: 📦 @vue-monorepo-template/simple publish to NPM
       #   continue-on-error: true
+      #   working-directory: packages/simple
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
