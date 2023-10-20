@@ -17,12 +17,9 @@ jobs:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
 
-      # - run: npm ci
       - run: npm install
-      # - run: npm run hoist
-      - run: npm run bootstrap
       - run: npm run build
-      - run: npm run build:website
+      - run: npm run doc
 
       - name: Create Tag
         id: create_tag
