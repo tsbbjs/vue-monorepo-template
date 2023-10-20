@@ -9,6 +9,7 @@ import mdStr from '../../README.md';
 export default defineComponent({
   data() {
     return {
+      repopage: 'https://github.com/tsbbjs/vue-monorepo-template',
       markdown: mdStr,
       description: pkg.description,
     };
@@ -23,12 +24,12 @@ export default defineComponent({
 
 <template>
   <div>
-    <github-corners fixed target="__blank" href="https://github.com/tsbbjs/vue-monorepo-template" />
+    <github-corners fixed target="__blank" :href="repopage" />
     <header>
       <div>
         <img src="./assets/vue.svg" alt="Vue Monorepo Template" />
       </div>
-      <a href="https://github.com/uivjs/vue-markdown-preview" target="__blank">Vue Monorepo Template</a>
+      <a :href="repopage" target="__blank">Vue Monorepo Template</a>
       <p>Simple Vue 3 package development project example template.</p>
     </header>
     <example-base></example-base>
