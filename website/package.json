@@ -16,7 +16,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue": "^5.0.0",
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
