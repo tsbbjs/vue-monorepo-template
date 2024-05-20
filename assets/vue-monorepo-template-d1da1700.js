@@ -1,1 +1,0 @@
-import{d as t,c as a,a as r}from"./vue-82458acb.js";var l={title:{type:String,default:"title"}};const i=t({name:"Base",props:l,setup(e){return()=>a("div",null,[r("Package Base: "),e.title])}}),n=t({name:"Simple",props:{title:{type:String,default:"title"}},setup(e){return()=>a("div",null,[r("Package Simple: "),e.title])}});export{i as T,n as a};
